@@ -23,7 +23,7 @@ void setup() {
     // Choose the USB camera by index
     int cameraIndex = 0; // Set the desired camera index here
     if (cameraIndex >= 0 && cameraIndex < cameras.length) {
-      video = new Capture(this, cameras[1]);
+      video = new Capture(this, cameras[0]);
       video.start();
     } else {
       println("Invalid camera index");
@@ -32,7 +32,7 @@ void setup() {
   }
   
   // Initialize Arduino serial communication
-  String portName = "/dev/cu.usbmodem141301"; // Set the desired serial port here
+  String portName = "/dev/cu.usbmodem141101"; // Set the desired serial port here
   arduino = new Serial(this, portName, 9600);
 
 }
